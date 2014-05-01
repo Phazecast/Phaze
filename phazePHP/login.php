@@ -14,7 +14,27 @@ if (isset($_POST['logar'])) {
     
     include './conectaBanco.php';
     
+    $usuarios = mysql_query("select * from usuario where login = '$login' and senha='$senha'");
+    $vetUsuarios = mysql_fetch_assoc($usuarios); 
     
+    if ($vetUsuarios) {// se retornou alguma informaçao do banco
+        
+        session_start(); //iniciando a sessao
+
+        $_SESSION['nome'] = $vetUsuarios['nome'];
+
+
+        if ($_SESSION['acesso'] == 1) {
+
+            header("location:listaEscolas.php");
+        } else {
+
+            header("location:listaEscolasVisitante.php");
+        }
+    } else {
+
+        echo "<script>  alert('Dados incorretos');  </script>";
+    }
     
 }
 ?>
