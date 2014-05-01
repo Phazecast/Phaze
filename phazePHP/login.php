@@ -12,6 +12,8 @@ if (isset($_POST['logar'])) {
     $login = $_POST['campLogin'];
     $senha = $_POST['campSenha'];
     
+    include './conectaBanco.php';
+    
     
     
 }
