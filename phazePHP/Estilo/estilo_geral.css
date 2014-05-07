@@ -1,0 +1,133 @@
+/* 
+Esse estilo é usado no projeto todo com esseção da pagina dos administradores.
+Ele é definido no template geral do site (template_geral).
+*/
+
+body{
+    margin:0;
+    padding:0; 
+    background: #151618 url("../Imagens/bg.jpg") no-repeat center top;
+    font-family: 'Arial';
+    
+    
+    -moz-box-shadow:   inset  0 0 15px #000000;
+     -webkit-box-shadow:inset  0 0 15px #000000;
+     box-shadow:        inset  0 0 15px #000000;
+}
+
+@font-face {
+    font-family: BebasNeue;
+    src: url("../Fontes/BebasNeue.otf") format("opentype");
+}
+
+/* H2 -> titulos da materia e etc */
+h1{
+    font-family: 'BebasNeue';
+}
+
+/* H2 -> definições da materia e etc */
+h2{
+
+}
+
+/* H3 -> corpo da materia*/
+h3{
+
+}
+
+/* Inicio Menu */
+
+#menu{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#menu_interno{
+    margin: auto;
+    padding: auto;
+    width: 960px;
+    height: 60px;
+}
+
+#menu_lista{
+    margin-left: 270px;
+}
+
+#menu_lista ul {
+	padding:0px;
+	margin:0px;
+	list-style:none;
+}
+
+#menu_lista ul li { display: inline; }
+
+#menu_lista ul li a {
+	padding: 2px 10px;
+	display: inline-block;
+ 
+	/* visual do link */
+        color: #cccccc;
+	text-decoration: none;
+        font-family: 'BebasNeue';
+        font-size: 30px;
+        letter-spacing: 1px;
+}
+
+#menu ul li a:hover {
+	color: #6D6D6D;
+}
+
+/* Fim Menu */
+
+/* Inicio Topo */
+
+#topo{
+    width: 100%;
+    height: 350px;
+    background-image: url('../Imagens/bg2.png');
+}
+
+#topo_interno{
+    margin: auto;
+    padding: auto;
+    width: 960px;
+    height: 350px;
+}
+
+/* Fim Topo */
+
+/* Inicio Corpo */
+
+#corpo{
+    width: 100%;
+    height: 200px;
+}
+
+#corpo_interno{
+    margin: auto;
+    padding: auto;
+    width: 960px;
+    height: 200px;
+    background-color: gray;
+}
+
+/* Fim Corpo */
+
+/* Inicio Rodapé */
+
+#rodape{
+    width: 100%;
+    height: 200px;
+}
+
+#rodape_interno{
+    margin: auto;
+    padding: auto;
+    width: 960px;
+    height: 200px;
+    background-color: burlywood;
+}
+
+/* Fim Rodapé */
