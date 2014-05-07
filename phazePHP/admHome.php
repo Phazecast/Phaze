@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
         <!-- Make sure the path to CKEditor is correct. -->
         <script src="Script/ckeditor/ckeditor.js"></script>
-      <script src="Script/ckeditor/config.js"></script> 
-
+	<script src="Script/ckeditor/config.js"></script> 
     </head>
     <body>
+
+	<div style="width: 800px">
+
         <form>
 
             <textarea name="editor1" id="editor1" >
-                This is my textarea to be replaced with CKEditor.
+                Escreva aqui!
             </textarea>
 
             <script>
@@ -20,9 +21,11 @@
 
 
                 CKEDITOR.replace('editor1');
-             
 
             </script>
         </form>
+
+	</div>
+
     </body>
 </html>
