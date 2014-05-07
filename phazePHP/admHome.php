@@ -1,22 +1,28 @@
-<html
+<!DOCTYPE html>
+<html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        <!-- Make sure the path to CKEditor is correct. -->
+        <script src="Script/ckeditor/ckeditor.js"></script>
+      <script src="Script/ckeditor/config.js"></script> 
 
     </head>
     <body>
-        <div class="container">
+        <form>
 
-            <div class="form">
+            <textarea name="editor1" id="editor1" >
+                This is my textarea to be replaced with CKEditor.
+            </textarea>
+
+            <script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
 
 
-                Aqui vai estar o formulario
+                CKEDITOR.replace('editor1');
+             
 
-            </div>
-
-
-        </div>
+            </script>
+        </form>
     </body>
-
 </html>
-<?php
-echo 'voce esta na pagina Inicial do Administrador Phaze ---- em breve novidades!!!';
