@@ -3,6 +3,7 @@
     <!-- Make sure the path to CKEditor is correct. -->
     <script src="Script/ckeditor/ckeditor.js"></script>
     <script src="Script/ckeditor/config.js"></script> 
+    <link rel="stylesheet" type="text/css" href="Estilo/estilo_adm.css"/>
     <meta charset="utf-8"/>
     <title>ADM - PHAZE</title>
 </head>
@@ -45,12 +46,12 @@ if (isset($_POST['salvar'])) {
     $imagemTemp = $_FILES['imagem']['tmp_name']; 
     move_uploaded_file($imagemTemp, $imagem);
     $data = date("Y-m-d");
-    include './conectaBanco.php';
-
-
-    mysql_query("INSERT INTO podcast( nome_do_podcast, texticulo, introducao, link_do_post, tema, data_hora, link_do_player, link_da_imagem, usuario_post) VALUES ('$nomePodcast','$texticulo','$introducao','$linkPost','$tema','$data','$linkPlayer','$imagem',1)") or die(mysql_error());
     
-    echo "<script> alert('Dados salvos com sucesso!!!'); </script>";
+    include './podcast.class.php';
+    
+    $phazeCast = new Podcast($nomePodcast, $texticulo, $introducao, $linksPost, $tema, $data, $linkPlayer, $imagem, $usuario); // dando valor aos atributos da classe atravez do construtor
+    $phazeCast->salvaPodcast();// chamando o metodo de salvar
+   
 }
 
 ?>

@@ -1,4 +1,4 @@
-
+﻿
 <meta charset="UTF-8">
 <title>Login - PHAZE</title>
 <form method="post" action="login.php"  >
@@ -23,7 +23,7 @@ if (isset($_POST['logar'])) {
         session_start(); //iniciando a sessao. esta variavel inicia sessao
 
         $_SESSION['nome'] = $vetUsuarios['nome_usuario']; // criei uma variavel de sessao chamada nome e mandei pra ela o campo nome do banco de dados
-        $_SESSION['permissao'] = $vetUsuarios['pemissao'];// variavel permissao e fiz a mesma coisa
+        $_SESSION['permissao'] = $vetUsuarios['permissao'];// variavel permissao e fiz a mesma coisa
 
         if ($_SESSION['permissao'] == 1) { // se permissao for igual a 1 entao vai ir pra pagina de adm
             
