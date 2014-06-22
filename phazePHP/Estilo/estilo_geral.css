@@ -22,11 +22,13 @@ body{
 /* H2 -> titulos da materia e etc */
 h1{
     font-family: 'BebasNeue';
+    font-weight: 500;
 }
 
 /* H2 -> definições da materia e etc */
 h2{
-
+    font-family: 'BebasNeue';
+    font-weight: 300;
 }
 
 /* H3 -> corpo da materia*/
