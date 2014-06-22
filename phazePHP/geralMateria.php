@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Phaze Podcast</title>
+        <title>Phaze Materia</title>
 
         <link rel="shortcut icon" href="Imagens/favicon.png" />
 
@@ -23,47 +23,44 @@ and open the template in the editor.
             <div id="corpo_interno">
         <?php
 	include("conectaBanco.php");
-	$phazepodcast = mysql_query("select * from podcast");
-	$podcast = mysql_fetch_assoc($phazepodcast);
+	$phazepodcast = mysql_query("select * from materia");
+	$materia = mysql_fetch_assoc($phazepodcast);
 	
         echo "<table align='center' border='1' width='80%'>";
 echo "<tr>";
-echo "<td><b>Codigo Podcast</b></td>";
-echo "<td><b>Nome do Podcast</b></td>";
+echo "<td><b>Codigo Materia</b></td>";
+echo "<td><b>Nome da Materia</b></td>";
 echo "<td><b>Data</b></td>";
-echo "<td><b>Texticulo</b></td>";
+echo "<td><b>Texto</b></td>";
 echo "<td><b>Introdução</b></td>";
-echo "<td><b>Links do Post</b></td>";
 echo "<td><b>Tema</b></td>";
-echo "<td><b>Link do Player</b></td>";
 echo "<td><b>Imagem</b></td>";
+echo "<td><b>Usuário</b></td>";
 echo "</tr>";
-while ($podcast) { // uso o while pra continuar lendo o que tem no banco, tipo enquanto tiver podcast ele vai listar
+while ($materia) { // uso o while pra continuar lendo o que tem no banco, tipo enquanto tiver materia ele vai listar
     
-    $codPodcast = $podcast['cod_do_podcast'];
-    $nomePodcast = $podcast['nome_do_podcast'];
-    $texticulo = $podcast['texticulo'];
-    $introducao = $podcast['introducao'];
-    $linkPost = $podcast['link_do_post'];
-    $tema = $podcast['tema'];
-    $linkPlayer = $podcast['link_do_player'];
-    $imagem = $podcast['link_da_imagem'];
-    $data = $podcast['data_hora'];
-
+    $codMateria = $materia['cod_materia'];
+    $nomeMateria = $materia['nome_materia'];
+    $texto = $materia['texto'];
+    $introducao = $materia['introducao'];
+    $tema = $materia['tema'];
+    $imagem = $materia['imagem_da_capa'];
+    $data = $materia['data_hora'];
+    $usuario = $materia['usuario_do_post'];
+    
     echo "<tr>";
-    echo "<td>" . $codPodcast . "</td>";
-    echo "<td>" . $nomePodcast . "</td>";
+    echo "<td>" . $codMateria . "</td>";
+    echo "<td>" . $nomeMateria . "</td>";
     echo "<td>" . $data . "</td>";
-    echo "<td>" . $texticulo . "</td>";
+    echo "<td>" . $texto . "</td>";
     echo "<td>" . $introducao . "</td>";
-    echo "<td>" . $linkPost . "</td>";
     echo "<td>" . $tema . "</td>";
-    echo "<td>" . $linkPlayer . "</td>";
     echo "<td> <img src='$imagem' width='100' height='100' /> </td>";
+    echo "<td>" . $usuario. "</td>";
     echo "</tr>";
 
 // chamo o fetch_assoc pra renovar a variavel com mais podcast se existir
-    $podcast = mysql_fetch_assoc($phazepodcast);
+    $materia = mysql_fetch_assoc($phazepodcast);
 }
 
 echo "</table>";
