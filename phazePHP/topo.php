@@ -9,10 +9,10 @@
                             <td>
                                 <nav id="menu_lista">
                                     <ul>
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">Podcasts</a></li>
-                                        <li><a href="#">Matérias</a></li>
-                                        <li><a href="#">Sobre</a></li>
+                                        <li><a href="index.php">Home</a></li>
+                                        <li><a href="geralPodcast.php">Podcasts</a></li>
+                                        <li><a href="geralMateria.php">Matérias</a></li>
+                                        <li><a href="sobre.php">Sobre</a></li>
                                     </ul>
                                 </nav>
                             </td>
