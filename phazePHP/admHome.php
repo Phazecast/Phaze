@@ -49,7 +49,7 @@ if (isset($_POST['salvar'])) {
     
     include './podcast.class.php';
     
-    $phazeCast = new Podcast($nomePodcast, $texticulo, $introducao, $linksPost, $tema, $data, $linkPlayer, $imagem, $usuario); // dando valor aos atributos da classe atravez do construtor
+    $phazeCast = new Podcast($nomePodcast, $texticulo, $introducao, $linksPost, $tema, $data, $linkPlayer, $imagem, 1); // dando valor aos atributos da classe atravez do construtor
     $phazeCast->salvaPodcast();// chamando o metodo de salvar
    
 }
