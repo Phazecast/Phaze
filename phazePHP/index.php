@@ -7,7 +7,7 @@
         <link rel="shortcut icon" href="Recursos/Imagens/favicon.png" />
 
         <link rel="stylesheet" type="text/css" href="Estilo/estilo_geral.css"/>
-
+        
     </head>
     <body>
         <div id="aplicacao">

@@ -6,7 +6,7 @@ Ele é definido no template geral do site (template_geral).
 body{
     margin:0;
     padding:0; 
-    background: #151618 url("../Imagens/bg.jpg") no-repeat center top;
+    background: #151618 url("../Imagens/bg.jpg") no-repeat center top !important;
     font-family: 'Arial';
     
     -moz-box-shadow:   inset  0 0 15px #000000;
@@ -22,11 +22,13 @@ body{
 /* H2 -> titulos da materia e etc */
 h1{
     font-family: 'BebasNeue';
+    font-weight: 500;
 }
 
 /* H2 -> definições da materia e etc */
 h2{
-
+    font-family: 'BebasNeue';
+    font-weight: 300;
 }
 
 /* H3 -> corpo da materia*/
@@ -41,6 +43,7 @@ h3{
     height: 80px;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
 }
 
 #menu_interno{
@@ -48,6 +51,7 @@ h3{
     padding: auto;
     width: 1000px;
     height: 60px;
+    z-index: 2;
 }
 
 #menu_lista{
@@ -86,6 +90,7 @@ h3{
     width: 100%;
     height: 370px;
     background-image: url('../Imagens/bg2.png');
+    z-index: 0;
 }
 
 #topo_interno{
@@ -93,6 +98,7 @@ h3{
     padding: auto;
     width: 960px;
     height: 370px;
+    z-index: -5;
 }
 
 /* Fim Topo */
@@ -126,12 +132,23 @@ h3{
     padding: auto;
     width: 960px;
     height: 100px;
-    
     opacity: 0.4;
     background-color: gray;
-    
-
-    
 }
 
 /* Fim Rodapé */
+
+/* Inicio Outros */
+
+.tituloSecao{
+    font-size: 50px;
+    font-family: 'BebasNeue';
+    color: #0099FF;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+/* Fim Outros */
+
+
