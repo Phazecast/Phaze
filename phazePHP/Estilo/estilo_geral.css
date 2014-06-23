@@ -55,7 +55,9 @@ h3{
 }
 
 #menu_lista{
-    margin-left: 270px;
+    margin-top: -30px;
+    margin-left: 200px;
+    position: absolute;
 }
 
 #menu_lista ul {
