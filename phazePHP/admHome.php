@@ -27,7 +27,7 @@
     Links Post:<textarea name="linksPost" style="width: 700px ; height:20px "> </textarea> <br />
     Tema: <input type="text" name="tema" /> <br />
     Link do Player: <textarea  name="linkPlayer" style="width: 700px ; height:20px "> </textarea> <br />
-    Imagem: <input type="file" name="imagem" /><br /><br />
+    Imagem: <input type="file" name="imagemPodcast" /><br /><br />
 
     <input type="submit" name="salvar" value="Salvar"/>
 </form>
@@ -35,23 +35,29 @@
 <?php
 if (isset($_POST['salvar'])) {
 
-    // usando o metodo POST salvei o conteudo dos campos em variaveis.. note que nos colchetes estao os nomes dos campos 
+// usando o metodo POST salvei o conteudo dos campos em variaveis.. note que nos colchetes estao os nomes dos campos 
     $nomePodcast = $_POST['nomePodcast'];
     $texticulo = $_POST['texticulo'];
     $introducao = $_POST['introducao'];
     $linkPost = $_POST['linksPost'];
     $tema = $_POST['tema'];
     $linkPlayer = $_POST['linkPlayer'];
-    $imagem = ".\imagemPodcast" . $_FILES['imagem']['name']; // esta parte é pro upload da imagem.. ele salvar a imagem em outro lugar.. ainda em experimentação
-    $imagemTemp = $_FILES['imagem']['tmp_name']; 
-    move_uploaded_file($imagemTemp, $imagem);
-    $data = date("Y-m-d");
-    
-    include './podcast.class.php';
-    
-    $phazeCast = new Podcast($nomePodcast, $texticulo, $introducao, $linksPost, $tema, $data, $linkPlayer, $imagem, 1); // dando valor aos atributos da classe atravez do construtor
-    $phazeCast->salvaPodcast();// chamando o metodo de salvar
-   
-}
+    $imagem = "imagemPodcast/" . time() . $_FILES['imagemPodcast']['name']; // esta parte é pro upload da imagem.. ele salvar a imagem em outro lugar.. ainda em experimentação
+    $imagemTemp = $_FILES['imagemPodcast']['tmp_name'];
+    move_uploaded_file($_FILES['imagemPodcast']['tmp_name'], $imagem);
 
+
+    $data = date("Y-m-d");
+
+
+
+    include './podcast.class.php';
+
+    $phazeCast = new Podcast($nomePodcast, $texticulo, $introducao, $linkPost, $tema, $data, $linkPlayer, $imagem, 1); // dando valor aos atributos da classe atravez do construtor
+    try {
+        $phazeCast->salvaPodcast(); // chamando o metodo de salvar
+    } catch (Exception $exc) {
+        echo $exc->getTraceAsString();
+    }
+}
 ?>

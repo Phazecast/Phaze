@@ -62,12 +62,18 @@ class Podcast {
 
     public function salvaPodcast() {
 
-
-        include './conectaBanco.php';
+        try {
+            include './conectaBanco.php';
 
         mysql_query("INSERT INTO podcast( nome_do_podcast, texticulo, introducao, link_do_post, tema, data_hora, link_do_player, link_da_imagem, usuario_post) VALUES ('$this->nome','$this->texticulo','$this->introducao','$this->linksPost','$this->tema','$this->data','$this->linkPlayer','$this->imagem',$this->usuario)") or die(mysql_error());
 
         echo "<script> alert('Dados Salvos com sucesso!'); </script>";
+            
+        } catch (Exception $exc) {
+            echo $exc->getTraceAsString();
+        }
+
+        
     }
 
     public function listarPodcast() {
