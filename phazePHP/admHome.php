@@ -47,7 +47,7 @@ if (isset($_POST['salvar'])) {
     move_uploaded_file($_FILES['imagemPodcast']['tmp_name'], $imagem);
 
 
-    $data = date("Y-m-d");
+    $data = date('Y-m-d H:i:s');
 
 
 
