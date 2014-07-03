@@ -12,6 +12,17 @@ and open the template in the editor.
         <link rel="shortcut icon" href="Imagens/favicon.png" />
 
         <link rel="stylesheet" type="text/css" href="Estilo/estilo_geral.css"/>
+        
+        <style>
+            .topoItem{
+                background-color: rgba(0, 0, 0, 0.05);
+            }
+            .corpoItem{
+                background-color: rgba(255, 255, 255, 0.4);
+            }
+        </style>
+        
+        
     </head>
     <body>
         <div id="aplicacao">
@@ -21,22 +32,15 @@ and open the template in the editor.
         ?>
         <div id="corpo">
             <div id="corpo_interno">
+                
+<br>
+	<h1 class="tituloSecao">Matérias</h1>
+                
         <?php
 	include("conectaBanco.php");
 	$phazepodcast = mysql_query("select * from materia");
 	$materia = mysql_fetch_assoc($phazepodcast);
 	
-        echo "<table align='center' border='1' width='80%'>";
-echo "<tr>";
-echo "<td><b>Codigo Materia</b></td>";
-echo "<td><b>Nome da Materia</b></td>";
-echo "<td><b>Data</b></td>";
-echo "<td><b>Texto</b></td>";
-echo "<td><b>Introdução</b></td>";
-echo "<td><b>Tema</b></td>";
-echo "<td><b>Imagem</b></td>";
-echo "<td><b>Usuário</b></td>";
-echo "</tr>";
 while ($materia) { // uso o while pra continuar lendo o que tem no banco, tipo enquanto tiver materia ele vai listar
     
     $codMateria = $materia['cod_materia'];
@@ -47,76 +51,29 @@ while ($materia) { // uso o while pra continuar lendo o que tem no banco, tipo e
     $imagem = $materia['imagem_da_capa'];
     $data = $materia['data_hora'];
     $usuario = $materia['usuario_do_post'];
+        
+echo "  <div>
+            <table width='100%'  >
+                <tr class='topoItem'>
+                    <td colspan='2'> <h2>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;". $nomeMateria . " </h2> </td>
+                </tr>
+                <tr class='corpoItem'>
+                    <td  width='250px'> 
+                        <img src='$imagem' width=400' height='150' /> 
+                    </td>
+                    <td style=''>" . $data ." &nbsp; <b> [ ". $tema ." ] </b> <br> ". $introducao .  "</td>
+            
+            </table>
+        </div> 
+        <br>";
     
-    echo "<tr>";
-    echo "<td>" . $codMateria . "</td>";
-    echo "<td>" . $nomeMateria . "</td>";
-    echo "<td>" . $data . "</td>";
-    echo "<td>" . $texto . "</td>";
-    echo "<td>" . $introducao . "</td>";
-    echo "<td>" . $tema . "</td>";
-    echo "<td> <img src='$imagem' width='100' height='100' /> </td>";
-    echo "<td>" . $usuario. "</td>";
-    echo "</tr>";
-
 // chamo o fetch_assoc pra renovar a variavel com mais podcast se existir
     $materia = mysql_fetch_assoc($phazepodcast);
 }
 
-echo "</table>";
-
 ?>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+               
+                
         </div>
         </div>
             

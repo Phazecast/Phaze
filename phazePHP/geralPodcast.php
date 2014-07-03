@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!DOCTYPE html>
 <html>
     <head>
@@ -28,8 +28,7 @@
             <div id="corpo_interno">
 
 <br>
-	<h1 class="tituloSecao">Podcasts</h1> 
-	<h1> Podcasts </h2> 
+	<h1 class="tituloSecao">Podcasts</h1>
                 
         <?php
 	include("conectaBanco.php");
