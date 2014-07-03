@@ -61,16 +61,7 @@ echo "  <div>
                         <img src='$imagem' width=400' height='150' /> 
                     </td>
                     <td style=''>" . $data ." &nbsp; <b> [ ". $tema ." ] </b> <br> ". $texticulo .  "</td>
-            <table border='1' width='100%'  >
-                <tr>
-                    <td colspan='2'> <h2> #" . $codPodcast ."&nbsp;". $nomePodcast . " </h2> </td>
-                </tr>
-                <tr>
-                    <td  width='250px'> 
-                        <img src='$imagem' width=300' height='150' /> 
-                    </td>
-                    <td>" . $data ." &nbsp; <b>". $tema ."</b> <br> ". $texticulo .  "</td>
-                </tr>
+            
             </table>
         </div> 
         <br>";
