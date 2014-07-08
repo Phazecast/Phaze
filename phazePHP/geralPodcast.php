@@ -57,7 +57,7 @@ echo "  <div>
                 </tr>
                 <tr class='corpoItem'>
                     <td  width='250px'> 
-                        <img src='$imagem' width=400' height='150' /> 
+                        <a href='individualPodcast.php?nomePodcast=$nomePodcast'><img src='$imagem' width=400' height='150' /></a> 
                     </td>
                     <td style=''>" . $data ." &nbsp; <b> [ ". $tema ." ] </b> <br> ". $texticulo .  "</td>
             

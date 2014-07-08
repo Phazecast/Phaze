@@ -21,7 +21,6 @@ and open the template in the editor.
     </head>
     <body>
         
-
         
         <?php
         include 'topo.php';
@@ -30,8 +29,10 @@ and open the template in the editor.
             <div id="corpo_interno">
                 <br/>
         <?php
+
+
         include("conectaBanco.php");
-	$phazepodcast = mysql_query("SELECT * FROM podcast ORDER BY cod_do_podcast ASC");
+	$phazepodcast = mysql_query("SELECT * FROM podcast WHERE nome_do_podcast = '".$_GET['nomePodcast']."' ORDER BY cod_do_podcast ASC");
 	$podcast = mysql_fetch_assoc($phazepodcast);
         
         $codPodcast = $podcast['cod_do_podcast'];

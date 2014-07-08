@@ -52,20 +52,22 @@ while ($materia) { // uso o while pra continuar lendo o que tem no banco, tipo e
     $data = $materia['data_hora'];
     $usuario = $materia['usuario_do_post'];
         
-echo "  <div>
+echo "  
+<div>
             <table width='100%'  >
                 <tr class='topoItem'>
                     <td colspan='2'> <h2>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;". $nomeMateria . " </h2> </td>
                 </tr>
                 <tr class='corpoItem'>
                     <td  width='250px'> 
-                        <img src='$imagem' width=400' height='150' /> 
+                        <a href='individualMateria.php?nomeMateria=$nomeMateria'><img src='$imagem' width=400' height='150' /></a> 
                     </td>
                     <td style=''>" . $data ." &nbsp; <b> [ ". $tema ." ] </b> <br> ". $introducao .  "</td>
             
             </table>
         </div> 
-        <br>";
+        <br>
+        ";
     
 // chamo o fetch_assoc pra renovar a variavel com mais podcast se existir
     $materia = mysql_fetch_assoc($phazepodcast);
