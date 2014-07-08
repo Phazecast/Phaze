@@ -23,7 +23,9 @@
 
         <?php 
             include 'topo.php';
+            include 'slider.php';
         ?>
+            
         <div id="corpo">
             <div id="corpo_interno">
 

@@ -7,6 +7,7 @@
         <link rel="shortcut icon" href="Imagens/favicon.png" />
 
         <link rel="stylesheet" type="text/css" href="Estilo/estilo_geral.css"/>
+        <link rel="stylesheet" type="text/css" href="Estilo/estilo_sobre.css"/>
 
     </head>
     <body>
@@ -16,9 +17,36 @@
             include 'topo.php';
         ?>
         
+            
+            <div id="topo">
+                <div id="topo_interno">
+                    
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    
+                <h1 class="tituloSecao" style="font-size: 50px">Sobre o Phaze</h1>
+                    
+                    <br>
+                    <br>
+                    
+                    </div>
+                </div>
+            
         <div id="corpo">
             <div id="corpo_interno">
-                <h1 class="tituloSecao">Sobre</h1>
+                
+                <br>
+                <br>
+                <br>
+                
+                
+                <h1 class="tituloSecao" style="font-size: 40px">Oque é</h1>
+                
                 
                 
                 <h1 class="sobre">
@@ -54,8 +82,32 @@
                     <center> Email para contato, sugestões, criticas ou contratos milionários: phazecast@gmail.com </center>
 
                     <br/>
+                    
+                <h1 class="tituloSecao" style="font-size: 40px">CAST</h1>
+                    
+                    <div class="cast">
+                        
+                        <div class="castNome">
+                            Jão
+                        </div>
+                        
+                        <div class="castNome">
+                            Guilherme
+                        </div>
+                        
+                        <div class="castNome">
+                            Igor Tsouru
+                        </div>
+                    
                     <br/>
+                    
                     </h1>
+                
+                
+                
+                
+                
+                
                 <!-- Conteudo a ser apresentado -->
                 
                 

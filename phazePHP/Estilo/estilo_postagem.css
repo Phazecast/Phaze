@@ -1,0 +1,56 @@
+/* 
+Esse estilo é usado nas páginas individuas (podcasts e materias)
+*/
+
+#tituloPodcast
+{
+    font-family: 'BebasNeue';
+    font-size: 50px;
+    margin-left: 10px;
+}
+
+#infoPodcast
+{
+    margin: 10px;
+}
+
+#barraSocialPodcast
+{
+  width: 100%;   
+}
+
+.codigoPodcast
+{
+    color: #0099FF;
+}
+
+#introducaoPodcast
+{
+    font-size: 25px;
+    font-weight: 300;
+}
+
+#comentarioPodcast
+{
+    margin: 20px;   
+}
+
+#textoPodcast
+{
+    margin: 20px;   
+}
+
+#introducaoPodcast
+{
+    margin: 20px;   
+}
+
+#playerPodcast
+{
+    margin: 20px;   
+}
+
+#linksPodcast
+{
+    margin: 20px;   
+}
