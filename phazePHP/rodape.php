@@ -5,7 +5,7 @@
         <table>
             <tr>
                 <td style="width: 750px">
-                    &nbsp; &nbsp; Phaze &copy;
+                    &nbsp; &nbsp; Phaze <a href="login.php"> &copy;</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Um pouco de Bacon, Tetris e AC/DC.
                 </td>
                 <td>

@@ -13,11 +13,11 @@ class Podcast {
     public $usuario;
 
     function Podcast($nome, $texticulo, $introducao, $linksPost, $tema, $data, $linkPlayer, $imagem, $usuario) {
-        $this->nome = $nome;
+        $this->nome = strtoupper( $nome);
         $this->texticulo = $texticulo;
         $this->introducao = $introducao;
         $this->linksPost = $linksPost;
-        $this->tema = $tema;
+        $this->tema = strtoupper($tema);
         $this->data = $data;
         $this->linkPlayer = $linkPlayer;
         $this->imagem = $imagem;
@@ -65,15 +65,14 @@ class Podcast {
         try {
             include './conectaBanco.php';
 
-        mysql_query("INSERT INTO podcast( nome_do_podcast, texticulo, introducao, link_do_post, tema, data_hora, link_do_player, link_da_imagem, usuario_post) VALUES ('$this->nome','$this->texticulo','$this->introducao','$this->linksPost','$this->tema','$this->data','$this->linkPlayer','$this->imagem',$this->usuario)") or die(mysql_error());
+            mysql_query("INSERT INTO podcast( nome_do_podcast, texticulo, introducao, link_do_post, tema, data_hora, link_do_player, link_da_imagem, usuario_post) VALUES ('$this->nome','$this->texticulo','$this->introducao','$this->linksPost','$this->tema','$this->data','$this->linkPlayer','$this->imagem',$this->usuario)") or die(mysql_error());
 
-        echo "<script> alert('Dados Salvos com sucesso!'); </script>";
+            echo "<script> alert('Dados Salvos com sucesso!'); </script>";
             
+            header("location:phazeADM.php?centro=cadPodcast");
         } catch (Exception $exc) {
             echo $exc->getTraceAsString();
         }
-
-        
     }
 
     public function listarPodcast() {

@@ -6,8 +6,8 @@ if (isset($_GET['codigoMateria'])) {
     $codigoMat = $_GET['codigoMateria'];// pegando o codigo para excluir
     mysql_query("delete from materia where cod_materia='$codigoMat'");
 
-    echo 'Excluido com sucesso!!';
-    echo "<br /><a href='listarMateria.php'>Voltar</a>";
+     header("location:phazeADM.php?centro=listarMateria");
+     
 } else {
 
     header("location:listarMateria.php");
