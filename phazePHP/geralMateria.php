@@ -20,6 +20,10 @@ and open the template in the editor.
             .corpoItem{
                 background-color: rgba(255, 255, 255, 0.4);
             }
+            .corpoItem img{
+                margin: 5px;
+                margin-right: 20px;
+            }
         </style>
         
         
@@ -58,13 +62,13 @@ echo "
 <div>
             <table width='100%'  >
                 <tr class='topoItem'>
-                    <td colspan='2'> <h2>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;". $nomeMateria . " </h2> </td>
+                    <td colspan='2'>  <a href='individualMateria.php?nomeMateria=$nomeMateria'><h2>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;". $nomeMateria . " </h2> </a> </td>
                 </tr>
                 <tr class='corpoItem'>
                     <td  width='250px'> 
                         <a href='individualMateria.php?nomeMateria=$nomeMateria'><img src='$imagem' width=400' height='150' /></a> 
                     </td>
-                    <td style=''>" . $data ." &nbsp; <b> [ ". $tema ." ] </b> <br> ". $introducao .  "</td>
+                    <td style=''> <a href='individualMateria.php?nomeMateria=$nomeMateria'>" . $data ." &nbsp; <b> [ ". $tema ." ] </b> <br>  ". $introducao .  " </a></td>
             
             </table>
         </div> 

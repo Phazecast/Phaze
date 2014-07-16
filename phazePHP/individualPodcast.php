@@ -1,57 +1,54 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
+<?php
+
+    include("conectaBanco.php");
+
+    $phazepodcast = mysql_query("SELECT * FROM podcast WHERE nome_do_podcast = '".$_GET['nomePodcast']."' ORDER BY cod_do_podcast ASC");
+    $podcast = mysql_fetch_assoc($phazepodcast);
+    $codPodcast = $podcast['cod_do_podcast'];
+    $nomePodcast = $podcast['nome_do_podcast'];
+    $texticulo = $podcast['texticulo'];
+    $introducao = $podcast['introducao'];
+    $linkPost = $podcast['link_do_post'];
+    $tema = $podcast['tema'];
+    $linkPlayer = $podcast['link_do_player'];
+    $imagem = $podcast['link_da_imagem'];
+    $data = $podcast['data_hora'];
+    $usuario = $podcast['usuario_post'];
+
+?>
+
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Phaze Podcast</title>
+        <title>Phaze - <?php echo $nomePodcast ?> </title>
         <link rel="shortcut icon" href="Imagens/favicon.png" />
         <link rel="stylesheet" type="text/css" href="Estilo/estilo_geral.css"/>
         <link rel="stylesheet" type="text/css" href="Estilo/estilo_postagem.css"/>
-        
     </head>
     <body>
-        
-        
+
         <?php
+
         include 'topo.php';
-
-
-        include("conectaBanco.php");
-	$phazepodcast = mysql_query("SELECT * FROM podcast WHERE nome_do_podcast = '".$_GET['nomePodcast']."' ORDER BY cod_do_podcast ASC");
-	$podcast = mysql_fetch_assoc($phazepodcast);
         
-        $codPodcast = $podcast['cod_do_podcast'];
-        $nomePodcast = $podcast['nome_do_podcast'];
-        $texticulo = $podcast['texticulo'];
-        $introducao = $podcast['introducao'];
-        $linkPost = $podcast['link_do_post'];
-        $tema = $podcast['tema'];
-        $linkPlayer = $podcast['link_do_player'];
-        $imagem = $podcast['link_da_imagem'];
-        $data = $podcast['data_hora'];
-        $usuario = $podcast['usuario_post'];
 
-echo "
+        echo "
             <div id='topo'>
                 <div id='topo_interno'>
                     <center> <img src='$imagem' /> </center>
                 </div>
             </div>
-                
-                ";
+        ";
 
         ?>
         
         <div id="corpo">
             <div id="corpo_interno">
                 <br/>
+                
         <?php
-
-
         
         echo "  <div>
         
@@ -121,10 +118,9 @@ echo "
 
         ?>
 
-                <div id="comentarioPodcast">
-                
-                
-                <div id="disqus_thread"></div>
+        <div id="comentarioPodcast">
+
+            <div id="disqus_thread"></div>
                 <script type="text/javascript">
                     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
                     var disqus_shortname = 'phazecast'; // required: replace example with your forum shortname
@@ -139,14 +135,17 @@ echo "
                 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
             </div>
         
-                </div>
+        </div>
             
         </div>
+        
         <br>
-        <?php
-        include 'rodape.php';        
-        ?>
+        
+        <?php include 'rodape.php'; ?>
+        
     </body>
+    
+    <!-- Facebook -->
     
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
@@ -157,9 +156,13 @@ echo "
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
     
+    
+    <!-- Twitter -->
+    
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     
-    <!-- Posicione esta tag depois da última tag do botão +1. -->
+    <!-- Google + -->
+    
 <script type="text/javascript">
   window.___gcfg = {lang: 'pt-BR'};
 
@@ -170,6 +173,5 @@ echo "
   })();
 </script>
     
-
 </html>
 

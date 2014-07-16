@@ -15,7 +15,6 @@ body{
 }
 
 @font-face {
-
     font-family: BebasNeue;
     src: url("../Fontes/BebasNeue.otf") format("opentype");
 }
@@ -39,6 +38,11 @@ h3{
 
 /* Inicio Menu */
 
+#logo{
+    width: 280px;
+    margin-top: -20px; 
+}
+
 #menu{
     width: 100%;
     height: 80px;
@@ -50,21 +54,21 @@ h3{
 #menu_interno{
     margin: auto;
     padding: auto;
-    width: 1000px;
+    width: 950px;
     height: 60px;
     z-index: 2;
 }
 
 #menu_lista{
-    margin-top: -30px;
-    margin-left: 200px;
-    position: absolute;
+    margin-top: -75px;
 }
 
 #menu_lista ul {
 	padding:0px;
 	margin:0px;
 	list-style:none;
+    
+    text-align: right;
 }
 
 #menu_lista ul li { display: inline; }
@@ -74,11 +78,13 @@ h3{
 	display: inline-block;
  
 	/* visual do link */
-        color: #cccccc;
+    color: #cccccc;
 	text-decoration: none;
-        font-family: 'BebasNeue';
-        font-size: 30px;
-        letter-spacing: 1px;
+    font-family: 'BebasNeue';
+    font-size: 30px;
+    letter-spacing: 1px;
+    
+    text-align: left;
 }
 
 #menu ul li a:hover {
@@ -120,11 +126,35 @@ h3{
 
 /* Fim Corpo */
 
+/* Resutado das postagens */
+
+.topoItem{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.corpoItem{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.corpoItem img{
+    margin: 5px;
+    margin-right: 20px;
+}
+
+/* Fim postagens */
+
 /* Inicio Rodapé */
+
+#logoRodape{
+    color: #51C1F1;
+    font-size: 30px;
+}
 
 #rodape{
     width: 100%;
     height: 100px;
+    
+    font-family: 'BebasNeue';
+    font-size: 30px;
+    
     background-image:  url('../Imagens/bg2.png');
 }
 
@@ -133,8 +163,7 @@ h3{
     padding: auto;
     width: 960px;
     height: 100px;
-    opacity: 0.4;
-    background-color: gray;
+    background-color: black;
 }
 
 /* Fim Rodapé */

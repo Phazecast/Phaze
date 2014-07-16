@@ -15,6 +15,10 @@
             .corpoItem{
                 background-color: rgba(255, 255, 255, 0.4);
             }
+            .corpoItem img{
+                margin: 5px;
+                margin-right: 20px;
+            }
         </style>
         
     </head>
@@ -55,13 +59,13 @@ while ($podcast) { // uso o while pra continuar lendo o que tem no banco, tipo e
 echo "  <div>
             <table width='100%'  >
                 <tr class='topoItem'>
-                    <td colspan='2'> <h2>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; #" . $codPodcast ."&nbsp;". $nomePodcast . " </h2> </td>
+                    <td colspan='2'> <a href='individualPodcast.php?nomePodcast=$nomePodcast'> <h2>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; #" . $codPodcast ."&nbsp;". $nomePodcast . " </h2> </a> </td>
                 </tr>
                 <tr class='corpoItem'>
                     <td  width='250px'> 
                         <a href='individualPodcast.php?nomePodcast=$nomePodcast'><img src='$imagem' width=400' height='150' /></a> 
                     </td>
-                    <td style=''>" . $data ." &nbsp; <b> [ ". $tema ." ] </b> <br> ". $texticulo .  "</td>
+                    <td style=''> <a href='individualPodcast.php?nomePodcast=$nomePodcast'> " . $data ." &nbsp; <b> [ ". $tema ." ] </b> <br> ". $texticulo .  " </a> </td>
             
             </table>
         </div> 
