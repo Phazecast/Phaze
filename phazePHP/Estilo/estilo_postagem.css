@@ -2,6 +2,21 @@
 Esse estilo é usado nas páginas individuas (podcasts e materias)
 */
 
+a
+{
+    text-decoration: none;
+}
+
+a:visited
+{
+    color: black;
+}
+
+a:hover
+{
+    color: gray;   
+}
+
 #tituloPodcast
 {
     font-family: 'BebasNeue';
@@ -54,3 +69,60 @@ Esse estilo é usado nas páginas individuas (podcasts e materias)
 {
     margin: 20px;   
 }
+
+
+/* Leia Mais */
+
+#leiaMais{
+    width: 100%;
+}
+
+#leiaMais_interno{
+    margin: auto;
+    padding: auto;
+    width: 960px;
+    background-color: rgba(252,252,252,0.5);
+}
+
+#leiaMais_conteudo{
+    padding: 10px;
+}
+
+.titulo_leiaMais{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.tema_leiaMais{
+    font-size: 20px;
+}
+
+.introducao_leiaMais{
+    font-size: 18px;
+}
+
+.leiaMais_leiaMais{
+    font-family: 'BebasNeue';
+    font-size: 30px;
+}
+
+/* Leia Mais */
+
+/* Comentarios */
+
+#comentario{
+    width: 100%;
+}
+
+#comentario_interno{
+    margin: auto;
+    padding: auto;
+    width: 960px;
+    background: radial-gradient(ellipse at center,  #ffffff 0%,#d6d6d6 100%); /* W3C */
+}
+
+#comentario_conteudo{
+    padding: 10px;
+}
+
+/* Comentarios */
