@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 
 <?php
-
     include("conectaBanco.php");
 
-    $phazepodcast = mysql_query("SELECT * FROM podcast WHERE nome_do_podcast = '".$_GET['nomePodcast']."' ORDER BY cod_do_podcast ASC");
+    $phazepodcast = mysql_query("SELECT * FROM podcast JOIN usuario WHERE usuario_post = cod_usuario AND nome_do_podcast = '".$_GET['nomePodcast']."' ORDER BY cod_do_podcast ASC");
     $podcast = mysql_fetch_assoc($phazepodcast);
     $codPodcast = $podcast['cod_do_podcast'];
     $nomePodcast = $podcast['nome_do_podcast'];
@@ -15,7 +14,7 @@
     $linkPlayer = $podcast['link_do_player'];
     $imagem = $podcast['link_da_imagem'];
     $data = $podcast['data_hora'];
-    $usuario = $podcast['usuario_post'];
+    $usuario = $podcast['nome_usuario'];
 
 ?>
 
@@ -61,7 +60,7 @@
             </div>
             
             <div id='infoPodcast'>
-                Postado por <b> $usuario </b> as <b> $data </b> Tema <b> $tema </b>
+                Postado por  <a href='geralAutor.php?autor=$usuario'> <b> $usuario </b> </a> as <b> $data </b> Tema <a href='geralTema.php?tema=$tema'> <b> $tema </b> </a>
             </div>
             
             <div id='barraSocialPodcast'>

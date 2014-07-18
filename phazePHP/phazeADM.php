@@ -192,6 +192,7 @@ if(isset($_SESSION['nome']) and $_SESSION['permissao']==1 or $_SESSION['permissa
 
         <link rel="stylesheet" href="navigataur.css" />
         <title> - PHAZE - ADM - </title>
+        <link rel="shortcut icon" href="Recursos/Imagens/favicon.png" />
     </head>
     <body>
 

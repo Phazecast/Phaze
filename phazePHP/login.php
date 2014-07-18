@@ -3,6 +3,7 @@
 
     <meta charset="UTF-8">
     <title>Login - PHAZE</title>
+        <link rel="shortcut icon" href="Recursos/Imagens/favicon.png" />
     <style>
         body{
             background-image:url(Imagens/bg2.png);

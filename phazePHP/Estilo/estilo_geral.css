@@ -36,6 +36,15 @@ h3{
 
 }
 
+a{
+    text-decoration: none !important;
+    color: #444444;   
+}
+
+a:hover{
+    text-decoration: none !important;
+}
+
 /* Inicio Menu */
 
 #logo{
@@ -137,6 +146,8 @@ h3{
     margin: 5px;
     margin-right: 20px;
 }
+.texto_introuducao{
+}
 
 /* Fim postagens */
 
@@ -153,6 +164,7 @@ h3{
     
     font-family: 'BebasNeue';
     font-size: 30px;
+    
     
     background-image:  url('../Imagens/bg2.png');
 }

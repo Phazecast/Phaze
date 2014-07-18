@@ -11,6 +11,7 @@ session_start();
     <link rel="stylesheet" type="text/css" href="Estilo/estilo_adm.css"/>
     <meta charset="utf-8"/>
     <title>ADM - PHAZE</title>
+        <link rel="shortcut icon" href="Recursos/Imagens/favicon.png" />
 </head>
 <center> <h1> - Cadastro de Podcast - </h1> </center> <br/><br/>
 

@@ -7,7 +7,7 @@
             <div id="menu">
                 <div id="menu_interno">
                     
-                                <img id="logo" src="Imagens/logo.png"/>
+                                <a href="index.php"><img id="logo" src="Imagens/logo.png"/></a>
                     
                                 <nav id="menu_lista">
                                     <ul>

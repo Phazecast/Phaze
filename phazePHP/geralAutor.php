@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        
         <title>Phaze</title>
-        <link rel="shortcut icon" href="Recursos/Imagens/favicon.png" />
+        <link rel="shortcut icon" href="Imagens/favicon.png" />
         <link rel="stylesheet" type="text/css" href="Estilo/estilo_geral.css"/>
     </head>
     <body>
@@ -11,22 +11,39 @@
 
         <?php 
             include 'topo.php';
-            include 'slider.php';
         ?>
         
+            <div id="topo">
+                <div id="topo_interno">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h1 class="tituloSecao" style="color: gray; font-size: 30px;">Autor</h1>
+                    <h1 class="tituloSecao" style="font-size: 50px"><?php echo $_GET['autor']; ?>                   
+                    </h1>
+                    <br>
+                    <br>
+                    
+                    </div>
+                </div>
+                
+            </div>
+                </div>
+            
         <div id="corpo">
             <div id="corpo_interno">
-                <!-- Conteudo a ser apresentado -->
                 
                 <?php
                 include("conectaBanco.php");
 
                 $phazepodcast = mysql_query("SELECT nome_do_podcast AS nome, link_da_imagem 
                 AS imagem, data_hora, tema, texticulo AS texticulo, nome_usuario, 0 AS tipo
-                FROM podcast JOIN usuario WHERE usuario_post = cod_usuario UNION
+                FROM podcast JOIN usuario WHERE usuario_post = cod_usuario AND nome_usuario  = '".$_GET['autor']."' UNION
                 SELECT nome_materia AS nome, imagem_da_capa 
                 AS imagem, data_hora, tema, introducao AS texticulo, nome_usuario, 1 AS tipo
-                FROM materia JOIN usuario WHERE usuario_do_post = cod_usuario 
+                FROM materia JOIN usuario WHERE usuario_do_post = cod_usuario AND nome_usuario  = '".$_GET['autor']."'
                 ORDER BY data_hora DESC");
 
                 $podcast = mysql_fetch_assoc($phazepodcast);
@@ -55,9 +72,7 @@
                                         <a href='individualPodcast.php?nomePodcast=$nome'><img src='$imagem' width=400' height='150' /> <a/>
 
                                     </td>
-                                    <td style='vertical-align: text-top; padding-top: 10px'> 
-                                        <a href='individualPodcast.php?nomePodcast=$nome'> ". $data_hora ." &nbsp; <b> [ ". $tema ." ] </b> <br><br> ". $texticulo ." </a> 
-                                    </td>
+                                    <td style=''> <a href='individualPodcast.php?nomePodcast=$nome'> ". $data_hora ." &nbsp; <b> [ ". $tema ." ] </b> <br><br> ". $texticulo ." </a> </td>
 
                             </table>
                         </div> 
@@ -76,9 +91,8 @@
                                         <a href='individualMateria.php?nomeMateria=$nome'><img src='$imagem' width=400' height='150' /> <a/>
 
                                     </td>
-                                    <td style=''>
-                                        <a href='individualMateria.php?nomeMateria=$nome'>".$data_hora." &nbsp; <b> [ ".$tema." ] </b> <br><br> ".$texticulo."</a>
-                                    </td>
+                                    <td style=''><a href='individualMateria.php?nomeMateria=$nome'>".$data_hora." &nbsp; <b> [ ".$tema." ] </b> <br><br> ".$texticulo."</a></td>
+
                             </table>
                         </div> 
                         <br>";

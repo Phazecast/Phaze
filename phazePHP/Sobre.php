@@ -3,12 +3,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        
         <title>Phaze Sobre</title>
-
         <link rel="shortcut icon" href="Imagens/favicon.png" />
-
         <link rel="stylesheet" type="text/css" href="Estilo/estilo_geral.css"/>
         <link rel="stylesheet" type="text/css" href="Estilo/estilo_sobre.css"/>
-
     </head>
     <body>
         <div id="aplicacao">
@@ -18,48 +15,28 @@
         ?>
         
             
-            <div id="topo">
-                <div id="topo_interno">
-                    
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    
+        <div id="topo">
+            <div id="topo_interno">
+                <br><br><br><br>
+                <br><br><br>
                 <h1 class="tituloSecao" style="font-size: 50px">Sobre o Phaze</h1>
-                    
-                    <br>
-                    <br>
-                    
-                    </div>
-                </div>
+                <br><br>
+            </div>
+        </div>
             
         <div id="corpo">
             <div id="corpo_interno">
                 
-                <br>
-                <br>
-                <br>
-                
+                <br><br><br>
                 
                 <h1 class="tituloSecao" style="font-size: 40px">Oque é</h1>
                 
-                
-                
                 <h1 class="sobre">
-
                     <center>
-                    
-                    Phaze é um web site dinâmico fundado com o foco de apresentar materiais com foco na cultura pop atual, abordando temas como filmes, séries , vídeo games.	
-                    A abordagem dos temas é feita através de matérias e podcast de forma bem humorada, As postagens são informadas também através de nossas fan pages:
-
-                        </center>
-                    
+                        Phaze é um web site dinâmico fundado com o foco de apresentar materiais com foco na cultura pop atual, abordando temas como filmes, séries , vídeo games.	
+                        A abordagem dos temas é feita através de matérias e podcast de forma bem humorada, As postagens são informadas também através de nossas fan pages:
+                    </center>
                     <br><br>
-
                     <div style="width:100%">
                     
                         <div style="width:33%; float: left">
@@ -75,14 +52,13 @@
                         </div>
                         
                     </div>
-
                     <br><br>
                     <br><br>
-                    
                     <center> Email para contato, sugestões, criticas ou contratos milionários: phazecast@gmail.com </center>
-
                     <br/>
-                    
+                
+                    </h1>
+                
                 <h1 class="tituloSecao" style="font-size: 40px">CAST</h1>
                     
                     <div class="cast">
@@ -101,7 +77,6 @@
                     
                     <br/>
                     
-                    </h1>
                 
                 
                 
