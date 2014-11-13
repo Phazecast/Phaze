@@ -1,22 +1,17 @@
 Oi, tudo bem ?
 ===============
 
-Esse ai È o nosso projeto: o *PHAZE!*
+Esse ai ÔøΩ o nosso projeto: o *PHAZE!*
 --------------
 
-Esquenta nao, ainda esta em um beta... talvez apha... ok agente um dia termina essa parada!
-Oque importa È fazer com o coracao e acreditar, ne?
+Esquenta nao, ainda esta em um beta... quase no fim!
 
 O objetivo e criar um sitezinho, um blog, e compartilhar com a internet materias,
-podcasts e muito mais: conteudo que iremos criar ao longo do tempo.
+podcasts e muito mais: conteudo nosso que iremos criar ao longo do tempo.
 
-Nossa proposta se resume em trazer de tudo:
-E tipo comer bancon, jogando tetris e escutando AC/DC
+Nossa proposta se resume em trazer material, discuss√µes e id√©ias de tudo
+que agente gosta de fazer, escutar, assistir, jogar...
 
-- Entende?
-- Nao?
-- Nem eu.
+ipo comer bacon, jogando tetris e escutando AC/DC. Fraga ?
 
 =)
-
-Partiu programar lika boss! sqn
