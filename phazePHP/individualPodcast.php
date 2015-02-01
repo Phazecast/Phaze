@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-    include("conectaBanco.php");
+    include("Admin/conectaBanco.php");
 
     $phazepodcast = mysql_query("SELECT * FROM podcast JOIN usuario WHERE usuario_post = cod_usuario AND nome_do_podcast = '".$_GET['nomePodcast']."' ORDER BY cod_do_podcast ASC");
     $podcast = mysql_fetch_assoc($phazepodcast);
@@ -35,6 +35,7 @@
 
         echo "
             <div id='topo'>
+                    <br>
                 <div id='topo_interno'>
                     <center> <img src='$imagem' /> </center>
                 </div>

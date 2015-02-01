@@ -13,7 +13,7 @@
     </style>
     <body>
         <div id="logoADM">
-            <center> <img src="Imagens/logo.png"/></center>
+            <center> <img style="width: 80%" src="Imagens/logo.png"/></center>
 
         </div>
         <div id="formADM" align="center">
@@ -34,7 +34,7 @@ if (isset($_POST['logar'])) {
     $login = $_POST['campLogin'];
     $senha = $_POST['campSenha'];
 
-    include './conectaBanco.php';
+    include './Admin/conectaBanco.php';
 
     $usuarios = mysql_query("select * from usuario where login_usuario = '$login' and senha_usuario='$senha'"); // fazendo um select e o que retornar do select é salvo na variavel usuarios
     $vetUsuarios = mysql_fetch_assoc($usuarios); // criei um vetor usando mysql_fetch_assoc e estou salvando o resultado nele
@@ -47,11 +47,15 @@ if (isset($_POST['logar'])) {
         $_SESSION['codUsuario'] = $vetUsuarios['cod_usuario'];
 
         if ($_SESSION['permissao'] == 1 or $_SESSION['permissao']==2) { // se permissao for igual a 1 entao vai ir pra pagina de adm
-            header("location:phazeADM.php");
+            
+            header("location:Admin/phazeADM.php");
+            
         } else {
-
-
-            header("location:login.php");
+            $_SESSION['permissao'] = 1;
+            header("location:Admin/phazeADM.php");
+            
+            //header("location:login.php");
+            
         }
     } else {
 

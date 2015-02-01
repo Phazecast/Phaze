@@ -37,7 +37,7 @@
 	<h1 class="tituloSecao">Podcasts</h1>
                 
         <?php
-	include("conectaBanco.php");
+	include("Admin/conectaBanco.php");
 	$phazepodcast = mysql_query("SELECT * FROM podcast ORDER BY cod_do_podcast DESC");
 	$podcast = mysql_fetch_assoc($phazepodcast);
 

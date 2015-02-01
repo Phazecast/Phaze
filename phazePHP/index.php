@@ -20,11 +20,7 @@
                 
                 <?php
 
-                if(!isset($_POST['ver'])){
-                    $_POST['ver'] = 6;
-                }
-
-                include("conectaBanco.php");
+                include("Admin/conectaBanco.php");
 
                 $phazepodcast = mysql_query("SELECT nome_do_podcast AS nome, link_da_imagem 
                 AS imagem, data_hora, tema, texticulo AS texticulo, nome_usuario, 0 AS tipo
@@ -32,7 +28,7 @@
                 SELECT nome_materia AS nome, imagem_da_capa 
                 AS imagem, data_hora, tema, introducao AS texticulo, nome_usuario, 1 AS tipo
                 FROM materia JOIN usuario WHERE usuario_do_post = cod_usuario 
-                ORDER BY data_hora DESC  LIMIT ".$_POST['ver'].";");
+                ORDER BY data_hora DESC;");
 
                 $podcast = mysql_fetch_assoc($phazepodcast);
 
@@ -94,13 +90,6 @@
                 }
 
                 ?>
-
-                <div id="vejaMais">
-                    <form method="post">
-                        <input type="hidden" value=" <?php echo ($_POST['ver']+6); ?> " name="ver" />
-                        <input style="float: right" type="submit" value="Ver Mais" />
-                    </form>
-                </div>
                 
                 <br>
 

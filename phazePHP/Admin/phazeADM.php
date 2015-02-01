@@ -12,6 +12,7 @@ if(isset($_SESSION['nome']) and $_SESSION['permissao']==1 or $_SESSION['permissa
         <meta charset="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" /> 
 
+        
         <style>
      /*--------------------------------
              Functional Styles (Required)
@@ -191,8 +192,20 @@ if(isset($_SESSION['nome']) and $_SESSION['permissao']==1 or $_SESSION['permissa
         </style>
 
         <link rel="stylesheet" href="navigataur.css" />
-        <title> - PHAZE - ADM - </title>
+        
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+        
+        <title> Phaze - Administrativo</title>
         <link rel="shortcut icon" href="Recursos/Imagens/favicon.png" />
+        
+        
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <style>
+            
+        </style>
+        
+        <link  href="../Estilo/estilo_adm.css" rel="stylesheet" type="text/css" />
+        
     </head>
     <body>
 
@@ -206,12 +219,13 @@ if(isset($_SESSION['nome']) and $_SESSION['permissao']==1 or $_SESSION['permissa
                     <label for="toggle" class="toggle" onclick></label>
                     <ul class="menu">
 
+                        <li><a href="phazeADM.php?centro=admIndex">Home</a></li>
                         <li><a href="phazeADM.php?centro=cadPodcast">Podcast</a></li>
                         <li><a href="phazeADM.php?centro=cadMateria">Materia</a></li>
                         <li><a href="phazeADM.php?centro=listarPodcast">List. Podcast</a></li>
                         <li><a href="phazeADM.php?centro=listarMateria">List. Materia</a></li>
                         <li><a href="phazeADM.php?centro=cadUsuario">Integrantes</a></li>
-                        <li id="saID"><a href="sair.php">Sair</a></li>
+                        <li id="saID"><a href="../sair.php">Sair</a></li>
 
                     </ul>
                 </div><!-- End of Navigation -->
@@ -221,34 +235,25 @@ if(isset($_SESSION['nome']) and $_SESSION['permissao']==1 or $_SESSION['permissa
         </div><!-- End of Container -->
 
         <br/>
-        <?php
-        echo "<div align='left'>Bem vindo, ".$_SESSION['nome']."</div>   ";
-        ?>
-        <br/>
-        <br/>
         <br/>
 
-    <center> 
 
         <div id="conteudoADM">
             <?php
            
-
-            
                @$centro = $_GET['centro'];
 
-               @include ($centro . ".php");
-            
-               
-
+                if(@$centro == null || @$centro == "")
+                {
+                    @include ("admIndex.php");
+                }
+                else
+                {
+                    @include ($centro . ".php");
+                }
+                   
             ?>
         </div>
-
-    </center>
-
-
-
-
 
 
 </body>

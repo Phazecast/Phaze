@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-    include("conectaBanco.php");
+    include("Admin/conectaBanco.php");
 
     $phazepodcast = mysql_query("select * from materia JOIN usuario WHERE usuario_do_post = cod_usuario AND nome_materia = '".$_GET['nomeMateria']."'  ORDER BY cod_materia ASC");
     $materia = mysql_fetch_assoc($phazepodcast);
@@ -23,6 +23,32 @@
         <link rel="shortcut icon" href="Imagens/favicon.png" />
         <link rel="stylesheet" type="text/css" href="Estilo/estilo_geral.css"/>
         <link rel="stylesheet" type="text/css" href="Estilo/estilo_postagem.css"/>
+        
+        <?php
+        
+        echo "
+        <style>
+            
+            #fundo_topo_interno
+            { 
+                width: 100%;
+                
+                background-color:red;
+                background-image: url($imagem);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                
+              -webkit-filter: blur(5px);
+              -moz-filter: blur(5px);
+              -o-filter: blur(5px);
+              -ms-filter: blur(5px);
+              filter: blur(5px);
+            }
+        
+        </style>";
+        
+    ?>
+
     </head>
     <body>
         
@@ -34,7 +60,10 @@
             echo "
                 <div id='topo'>
                     <div id='topo_interno'>
-                        <center> <img src='$imagem' /> </center>
+                        <div id='fundo_topo_interno'>
+                         <center> <img src='$imagem' /> </center>
+                        </div>
+                       
                     </div>
                 </div>
             ";

@@ -43,7 +43,7 @@ and open the template in the editor.
 	<h1 class="tituloSecao">Matérias</h1>
                 
         <?php
-	include("conectaBanco.php");
+	include("Admin/conectaBanco.php");
 	$phazepodcast = mysql_query("select * from materia");
 	$materia = mysql_fetch_assoc($phazepodcast);
 	

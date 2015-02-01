@@ -10,17 +10,22 @@ include("conectaBanco.php");
 $phazepodcast = mysql_query("select * from materia order by data_hora desc");
 $materia = mysql_fetch_assoc($phazepodcast);
 
-echo "<table align='center' border='1' width='80%'>";
+echo "<table align='center' border='1' width='90%' class='pure-table'>";
+    
+echo "<thead>";
 echo "<tr>";
-echo "<td><b>Codigo Materia</b></td>";
-echo "<td><b>Nome da Materia</b></td>";
-echo "<td><b>Data</b></td>";
-echo "<td><b>Texto</b></td>";
-echo "<td><b>Introdução</b></td>";
-echo "<td><b>Tema</b></td>";
-echo "<td><b>Imagem</b></td>";
-echo "<td><b>Usuário</b></td>";
+echo "<th>Imagem</th>";
+echo "<th>Codigo Materia</th>";
+echo "<th>Nome da Materia</th>";
+echo "<th>Data</th>";
+echo "<th>Texto</th>";
+echo "<th>Introdução</th>";
+echo "<th>Tema</th>";
+echo "<th>Usuário</th>";
+echo "<th></th>";
 echo "</tr>";
+echo "</thead>";
+    
 while ($materia) { // uso o while pra continuar lendo o que tem no banco, tipo enquanto tiver materia ele vai listar
     $codMateria = $materia['cod_materia'];
     $nomeMateria = $materia['nome_materia'];
@@ -32,13 +37,13 @@ while ($materia) { // uso o while pra continuar lendo o que tem no banco, tipo e
     $usuario = $materia['usuario_do_post'];
 
     echo "<tr>";
+    echo "<td> <img src='../$imagem' width='100' height='100' /> </td>";
     echo "<td>" . $codMateria . "</td>";
     echo "<td>" . $nomeMateria . "</td>";
     echo "<td>" . $data . "</td>";
     echo "<td>" . $texto . "</td>";
     echo "<td>" . $introducao . "</td>";
     echo "<td>" . $tema . "</td>";
-    echo "<td> <img src='$imagem' width='100' height='100' /> </td>";
     echo "<td>" . $usuario . "</td>";
     echo "<td> <a href='excluirMateria.php?codigoMateria=$codMateria'> Excluir</a> </td>"; // aqui estou mandando o codigo da materia junto se caso clicar em excluir
     echo "</tr>";
