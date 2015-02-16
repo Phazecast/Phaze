@@ -106,15 +106,15 @@ a:hover{
 
 #topo{
     width: 100%;
-    background-image: url('../Imagens/bg2.png');
     z-index: 0;
+    background-image: url('../Imagens/bg2.png');
 }
+
 
 #topo_interno{
     margin: auto;
     padding: auto;
     width: 960px;
-    z-index: -5;
 }
 
 /* Fim Topo */
@@ -122,6 +122,7 @@ a:hover{
 /* Inicio Corpo */
 
 #corpo{
+    z-index: 0;
     width: 100%;
 }
 
