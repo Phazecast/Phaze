@@ -21,21 +21,21 @@
      
                             <div class="carousel-inner">
                                     <div class="item active">
-                                            <img src="Imagens/Slider/artleo.com-5465.jpg" alt="orange" class="img-responsive">
+                                            <img src="Imagens/Slider/artleo.com-5465.jpg" alt="orange" class="img-responsive" width="100%">
                                               <div class="carousel-caption">
                                                 <h1>Primeira imagem do slider - 01</h1>
                                               </div>
                                     </div>
      
                                     <div class="item">
-                                            <img src="Imagens/Slider/artleo.com-5465.jpg" alt="orange" class="img-responsive">
+                                            <img src="Imagens/Slider/artleo.com-5465.jpg" alt="orange" class="img-responsive" width="100%">
                                               <div class="carousel-caption">
                                                 <h1>Segunda imagem do slider - 02</h1>
                                               </div>
                                     </div>
      
                                     <div class="item">
-                                            <img src="Imagens/Slider/artleo.com-5465.jpg" alt="orange" class="img-responsive">
+                                            <img src="Imagens/Slider/artleo.com-5465.jpg" alt="orange" class="img-responsive" width="100%">
                                               <div class="carousel-caption">
                                                 <h1>Terceira imagem do slider - 03</h1>
                                               </div>

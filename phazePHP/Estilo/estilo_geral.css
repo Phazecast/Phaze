@@ -63,7 +63,7 @@ a:hover{
 #menu_interno{
     margin: auto;
     padding: auto;
-    width: 950px;
+    max-width: 950px;
     height: 60px;
     z-index: 2;
 }
@@ -76,7 +76,6 @@ a:hover{
 	padding:0px;
 	margin:0px;
 	list-style:none;
-    
     text-align: right;
 }
 
@@ -112,9 +111,9 @@ a:hover{
 
 
 #topo_interno{
-    margin: auto;
+    margin: auto; 
     padding: auto;
-    width: 960px;
+    max-width: 960px;
 }
 
 /* Fim Topo */
@@ -129,7 +128,7 @@ a:hover{
 #corpo_interno{
     margin: auto;
     padding: auto;
-    width: 960px;
+    max-width: 960px;
     background: radial-gradient(ellipse at center,  #ffffff 0%,#d6d6d6 100%); /* W3C */
 }
 
@@ -186,8 +185,7 @@ a:hover{
 #rodape_interno{
     margin: auto;
     padding: auto;
-    width: 960px;
-    height: 100px;
+    max-width: 960px;
     background-color: black;
 }
 
