@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /phazePHP/index.php
+
+Disallow: /phazePHP/login.php

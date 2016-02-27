@@ -1,0 +1,16 @@
+/* TEAM */
+	Co-founder and dev: Igor Caldeira
+	From: BH, MG, Brazil
+
+	Co-founder and dev: João Paulo Neto
+	From: BH, MG, Brazil
+
+	Co-founder and dev: Guilherme Garcia
+	From: BH, MG, Brazil
+
+/* SITE */
+	Last Update: 2016/02/26
+	Language: PT-br
+	Doctype: HTML5
+	IDE:Brackets, Eclipse
+
