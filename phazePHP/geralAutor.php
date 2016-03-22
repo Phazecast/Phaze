@@ -36,7 +36,7 @@
             <div id="corpo_interno">
                 
                 <?php
-                include("conectaBanco.php");
+                include("Admin/conectaBanco.php");
 
                 $phazepodcast = mysql_query("SELECT nome_do_podcast AS nome, link_da_imagem 
                 AS imagem, data_hora, tema, texticulo AS texticulo, nome_usuario, 0 AS tipo

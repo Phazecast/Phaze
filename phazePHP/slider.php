@@ -6,6 +6,8 @@
         <script src="Script/js/bootstrap.min.js"></script>
     </head>
     <body>
+        
+        
         <div id="fundo_topo"><br> </div>
             <div id="topo">
                 <div id="topo_interno">
@@ -20,26 +22,61 @@
                             </ol>
      
                             <div class="carousel-inner">
-                                    <div class="item active">
-                                            <img src="Imagens/Slider/artleo.com-5465.jpg" alt="orange" class="img-responsive" width="100%">
-                                              <div class="carousel-caption">
-                                                <h1>Primeira imagem do slider - 01</h1>
+                                
+                                
+                                
+           <?php
+
+                include("Admin/conectaBanco.php");
+
+                $phazepodcast = mysql_query("SELECT nome_do_podcast AS nome, link_da_imagem 
+                AS imagem, data_hora, tema, texticulo AS texticulo, nome_usuario, 0 AS tipo
+                FROM podcast JOIN usuario WHERE usuario_post = cod_usuario UNION
+                SELECT nome_materia AS nome, imagem_da_capa 
+                AS imagem, data_hora, tema, introducao AS texticulo, nome_usuario, 1 AS tipo
+                FROM materia JOIN usuario WHERE usuario_do_post = cod_usuario 
+                ORDER BY data_hora DESC LIMIT 3;");
+
+                $podcast = mysql_fetch_assoc($phazepodcast);
+
+                while ($podcast) { // uso o while pra continuar lendo o que tem no banco, tipo enquanto tiver podcast ele vai listar
+
+                    $nome = $podcast['nome'];
+                    $imagem = $podcast['imagem'];
+                    $data_hora = $podcast['data_hora'];
+                    $tema = $podcast['tema'];
+                    $texticulo = $podcast['texticulo'];
+                    $nome_usuario = $podcast['nome_usuario'];
+                    $tipo = $podcast['tipo'];
+
+                    if($tipo == 0) // PODCAST
+                    {
+                        echo " 
+                                    <div class='item'>
+                                            <img src='$imagem' alt='$nome' class='img-responsive' width='100%'>
+                                              <div class='carousel-caption'>
+                                                <h1>$nome</h1>
                                               </div>
                                     </div>
-     
-                                    <div class="item">
-                                            <img src="Imagens/Slider/artleo.com-5465.jpg" alt="orange" class="img-responsive" width="100%">
-                                              <div class="carousel-caption">
-                                                <h1>Segunda imagem do slider - 02</h1>
+                        ";
+                    }
+                    else if($tipo == 1) // MATERIA
+                    {
+                        echo "
+                                    <div class='item active'>
+                                            <img src='$imagem' alt='$nome' class='img-responsive' width='100%'>
+                                              <div class='carousel-caption'>
+                                                <h1>$nome</h1>
                                               </div>
                                     </div>
-     
-                                    <div class="item">
-                                            <img src="Imagens/Slider/artleo.com-5465.jpg" alt="orange" class="img-responsive" width="100%">
-                                              <div class="carousel-caption">
-                                                <h1>Terceira imagem do slider - 03</h1>
-                                              </div>
-                                    </div>
+                        ";
+                    }
+
+                // chamo o fetch_assoc pra renovar a variavel com mais podcast se existir
+                    $podcast = mysql_fetch_assoc($phazepodcast);
+                }
+
+                ?>
                             </div>
                         
                           <!-- Controls -->

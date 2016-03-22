@@ -4,12 +4,12 @@ Esse estilo é usado nas páginas individuas (podcasts e materias)
 
 .cast
 {
-       
+      padding-bottom: 300px; 
 }
 
 .castNome
 {
-    font-family: 'BebasNeue';
+    
 }
 
 .castDescricao
@@ -20,4 +20,13 @@ Esse estilo é usado nas páginas individuas (podcasts e materias)
 .fotoCast
 {
     
+}
+.castFoto {
+    width: 150px;
+    border-radius: 1000px;
+}
+
+.castIntegrante {
+    float: left;
+    width: 30%
 }
