@@ -118,7 +118,7 @@ a:hover
     margin: auto;
     padding: auto;
     width: 960px;
-    background: radial-gradient(ellipse at center,  #ffffff 0%,#d6d6d6 100%); /* W3C */
+    background: radial-gradient(ellipse at center,  #2f2f2f 0%,#141414 100%); /* W3C */
 }
 
 #comentario_conteudo{
