@@ -199,7 +199,8 @@ a:hover{
     color: #0099FF;
 }
 .sobre{
-    
+    text-align: justify;
+    padding-right: 50px;
 }
 
 /* Fim Outros */
