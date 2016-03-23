@@ -25,26 +25,79 @@
         <link rel="shortcut icon" href="Imagens/favicon.png" />
         <link rel="stylesheet" type="text/css" href="Estilo/estilo_geral.css"/>
         <link rel="stylesheet" type="text/css" href="Estilo/estilo_postagem.css"/>
+        
+        
+        <?php
+        
+        list($width, $height, $type, $attr) = getimagesize($imagem);
+        
+        echo "
+        <style>
+            
+            #fundo_topo
+            { 
+                marginp: -10px;
+            
+                background-color:black;
+                background-image: url($imagem) !important;
+                background-repeat: no-repeat repeat;
+                background-size: cover;
+                
+                -webkit-filter: blur(5px);
+                -moz-filter: blur(5px);
+                -o-filter: blur(5px);
+                -ms-filter: blur(5px);
+                filter: blur(5px);
+                
+                height: ".(string)($height + 30) ."px !important;
+                
+                position: fixed;
+                width: 110%;
+                z-index: -5;
+            } 
+
+        </style>
+        ";
+
+    ?>
+
+        <style>
+        
+            #fundo_corpo
+            {
+                margin-top: -5px;
+                
+                width: 100%;
+                background: #151618 url("Imagens/bg.jpg") no-repeat center top !important;
+                -moz-box-shadow:   inset  0 0 15px #000000;
+                 -webkit-box-shadow:inset  0 0 15px #000000;
+                 box-shadow:        inset  0 0 15px #000000;
+                
+            }
+            
+        </style>
+        
+        
     </head>
     <body>
 
     <?php include_once("analyticstracking.php") ?>
-        
-        <?php
+           <?php
 
-        include 'topo.php';
-        
+            include 'topo.php';
+           
 
-        echo "
-            <div id='topo'>
-                    <br>
-                <div id='topo_interno'>
-                    <center> <img src='$imagem' /> </center>
-                </div>
-            </div>
-        ";
+            echo "
+                <div id='fundo_topo'></div>
+                
+                <div id'topo_interno'>
+                         <center> <img id='imagem' src='$imagem' /> </center>
+                         </div>
+            ";
 
         ?>
+        
+        <div id="fundo_corpo">
         
         <div id="corpo">
             <div id="corpo_interno">

@@ -54,13 +54,6 @@
             } 
 
         </style>
-        
-        <script>
-        
-            alert('$imagem');
-        
-        </script>
-        
         ";
 
     ?>
@@ -162,7 +155,6 @@
                         
                 ?>
                 
-                </div>
             </div>
             </div>
 
