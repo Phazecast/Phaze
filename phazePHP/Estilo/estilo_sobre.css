@@ -1,6 +1,10 @@
 /* 
 Esse estilo é usado nas páginas individuas (podcasts e materias)
 */
+p
+{    
+    font-family: 'Open Sans', sans-serif;
+}
 
 .cast
 {
@@ -8,7 +12,7 @@ Esse estilo é usado nas páginas individuas (podcasts e materias)
 }
 
 .castNome
-{
+
     
 }
 
@@ -29,4 +33,14 @@ Esse estilo é usado nas páginas individuas (podcasts e materias)
 .castIntegrante {
     float: left;
     width: 30%
+}
+
+.subtituloSobre {
+    margin-top: -40px;
+}
+
+
+
+.castNome {
+    font-size: 27px;
 }

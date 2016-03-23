@@ -6,6 +6,8 @@
         <link rel="shortcut icon" href="Imagens/favicon.png" />
         <link rel="stylesheet" type="text/css" href="Estilo/estilo_geral.css" />
         <link rel="stylesheet" type="text/css" href="Estilo/estilo_sobre.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <div id="aplicacao">
@@ -33,59 +35,61 @@
                     <div id="corpo_interno" style="padding-left: 50px">
 
                         <br>
-                        <h1 class="tituloSecao" style="font-size: 40px">Oque é</h1>
+                        <h1 class="tituloSecao" style="font-size: 40px">Oi? Phaze?</h1>
+                        <h2 class="subtituloSobre">Sobre</h2>
                         <p class="sobre">
-                            Phaze é um web site dinâmico fundado com o foco de apresentar materiais com foco na cultura pop atual, 
-                            abordando temas como filmes, séries , vídeo games. A abordagem dos temas é feita através de matérias e 
-                            podcast de forma bem humorada, as postagens são informadas também através de nossas fan pages.
-                            <br>
-                            <br>
-
-                            <h1 class="tituloSecao" style="font-size: 40px">Onde encontrar</h1>
-
-                            <div style="width:100%">
-                                <div>
-                                    <a href="https://www.google.com.br"><img src="Imagens/Sociais/facebook.png" width="30px"></a>Facebook
-                                </div>
-                                <div>
-                                    <a href="https://www.google.com.br"><img src="Imagens/Sociais/twitter.png" width="30px"></a>Twitter
-                                </div>
-                                <div>
-                                    <a href="https://www.google.com.br"><img src="Imagens/Sociais/google.png" width="30px"></a>Google+
-                                </div>
-                                <div>
-                                    <a href="https://www.google.com.br"><img src="Imagens/Sociais/rss.png" width="30px"></a>Rss
-                                </div>
-                                <div>
-                                    <a href="https://www.google.com.br"><img src="Imagens/Sociais/itunes.png" width="30px"></a>iTunes
-                                </div>
-                            </div>
-
-                            <h1 class="tituloSecao" style="font-size: 40px">Contato</h1>
-
-                            <div>
-                                <div>
-                                    Email : phazecast@gmail.com
-                                </div>
-                            </div>
+                            Fundado com o foco de apresentar materiais da cultura pop, o phaze é um web site dinâmico que com seu
+                            cast aborda temas como filmes, séries, vídeo games e etc. A abordagem dos temas é feita através de matérias e 
+                            podcast de forma bem humorada, as postagens são informadas também através de nossas fan pages. Segue lá!
                         </p>
 
-                        <h1 class="tituloSecao" style="font-size: 40px">CAST</h1>
+                        <h1 class="tituloSecao" style="font-size: 40px">Curta, sigua e some com a gente</h1>
+                        <h2 class="subtituloSobre">Redes Sociais</h2>
 
-                        <div class="cast">
-                            <div class="castIntegrante">
-                                <div class=""><img class="castFoto" src="Imagens/Cotocos/jao.jpg" /></div>
-                                Jão
+                        <div style="width:100%; font-size: 18px">
+                            <div>
+                                <a href="https://www.google.com.br"><i class="fa fa-facebook-square"></i>&nbsp;&nbsp;Facebook</a><br><br>
                             </div>
-                            <div class="castIntegrante">
-                                <div class=""><img class="castFoto" src="Imagens/Cotocos/guilherme.jpg" /></div>
-                                Guilherme
+                            <div>
+                                <a href="https://www.google.com.br"><i class="fa fa-twitter-square"></i>&nbsp;&nbsp;Twitter</a><br><br>
                             </div>
-                            <div class="castIntegrante">
-                                <div class=""><img class="castFoto" src="Imagens/Cotocos/igor.jpg" /></div>
-                                Igor
+                            <div>
+                                <a href="https://www.google.com.br"><i class="fa fa-google-plus-square"></i>&nbsp;&nbsp;Google+</a><br><br>
+                            </div>
+                            <div>
+                                <a href="https://www.google.com.br"><i class="fa fa-rss-square"></i>&nbsp;&nbsp;Rss</a><br><br>
+                            </div>
+                            <div>
+                                <a href="https://www.google.com.br"><i class="fa fa-music"></i>&nbsp;&nbsp;iTunes</a>
                             </div>
                         </div>
+
+                        <h1 class="tituloSecao" style="font-size: 40px">Entre em contato</h1>
+                        <h2 class="subtituloSobre">Fale Conosco</h2>
+
+                        <div>
+                            <a href="https://www.google.com.br"><i class="fa fa-envelope"></i>&nbsp;&nbsp;phazecast@gmail.com</a>
+                        </div>
+
+                        <h1 class="tituloSecao" style="font-size: 40px">Nosso Cast</h1>
+                        <h2 class="subtituloSobre">os pazhecas </h2>
+                        <br>
+                        <center>
+                            <div class="cast">
+                                <div class="castIntegrante">
+                                    <div class=""><img class="castFoto" src="Imagens/Cotocos/jao.jpg" /></div>
+                                    <p><span class="castNome">Jão</span><br> @JaoP_Neto</p>
+                                </div>
+                                <div class="castIntegrante">
+                                    <div class=""><img class="castFoto" src="Imagens/Cotocos/guilherme.jpg" /></div>
+                                    <p><span class="castNome">Guilherme</span><br> @guilherme_gga</p>
+                                </div>
+                                <div class="castIntegrante">
+                                    <div class=""><img class="castFoto" src="Imagens/Cotocos/igor.jpg" /></div>
+                                    <p><span class="castNome">Igor</span><br> @tsouru</p>
+                                </div>
+                            </div>
+                        </center>
                     </div>
 
             <?php 
