@@ -4,7 +4,9 @@
         <br>
         <table>
             <tr>
-                <td style="width: 750px">&nbsp; &nbsp; <span id="logoRodape"> Phaze </span> <a href="login.php"> &copy;</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Um pouco de Bacon, Tetris e AC/DC.
+                <td style="width: 750px">&nbsp; &nbsp; <span id="logoRodape"> Phaze &copy;</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    Um pouco de Bacon, Tetris e AC/DC.
                 </td>
                 <td>
                     <a href="https://www.google.com.br"><img src="Imagens/Sociais/rss.png" width="30px"></a>
