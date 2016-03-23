@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Phaze</title>
     <link rel="shortcut icon" href="Recursos/Imagens/favicon.png" />
@@ -16,6 +17,7 @@
 </head>
 
 <body>
+    <?php include_once("analyticstracking.php") ?>
     <div id="aplicacao">
 
         <?php 

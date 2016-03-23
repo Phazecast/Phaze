@@ -28,6 +28,8 @@
     </head>
     <body>
 
+    <?php include_once("analyticstracking.php") ?>
+        
         <?php
 
         include 'topo.php';
