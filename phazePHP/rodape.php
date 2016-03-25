@@ -24,6 +24,9 @@
                 <li>
                     <a href="Sobre.php">Sobre</a>
                 </li>
+                <li>
+                    <a href="login.php">ADM</a>
+                </li>
             </ul>
         </div>
         <div id="rodapeLeiaMais" style="float:left;">
