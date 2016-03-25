@@ -13,16 +13,16 @@
             <ul id="menuRodape">
                 <li><span class="subtitulo">Phaze</span></li>
                 <li>
-                    <a href="https://www.google.com.br">Home</a>
+                    <a href="index.php">Home</a>
                 </li>
                 <li>
-                    <a href="https://www.google.com.br">Podcast</a>
+                    <a href="geralPodcast.php">Podcast</a>
                 </li>
                 <li>
-                    <a href="https://www.google.com.br">Matérias</a>
+                    <a href="geralMateria.php">Matérias</a>
                 </li>
                 <li>
-                    <a href="https://www.google.com.br">Sobre</a>
+                    <a href="Sobre.php">Sobre</a>
                 </li>
             </ul>
         </div>
@@ -71,11 +71,11 @@
             </ul>
         </div>
         <div id="rodapeSocialMedia" style="float:right;">
-            <a href="https://www.google.com.br"><img src="Imagens/Sociais/rss.png" width="30px"></a>
-            <a href="https://www.google.com.br"><img src="Imagens/Sociais/itunes.png" width="30px"></a>
-            <a href="https://www.google.com.br"><img src="Imagens/Sociais/facebook.png" width="30px"></a>
-            <a href="https://www.google.com.br"><img src="Imagens/Sociais/google.png" width="30px"></a>
-            <a href="https://www.google.com.br"><img src="Imagens/Sociais/twitter.png" width="30px"></a>
+            <!--<a href="https://www.google.com.br"><img src="Imagens/Sociais/rss.png" width="30px"></a>
+            <a href="https://www.google.com.br"><img src="Imagens/Sociais/itunes.png" width="30px"></a>-->
+            <a href="https://www.facebook.com/PHAZE-620009784694858/?fref=ts"><img src="Imagens/Sociais/facebook.png" width="30px"></a>
+            <a href="https://plus.google.com/u/0/110294544033689146328/posts"><img src="Imagens/Sociais/google.png" width="30px"></a>
+            <a href="https://twitter.com/phazepodcast"><img src="Imagens/Sociais/twitter.png" width="30px"></a>
         </div>
         
     </div>

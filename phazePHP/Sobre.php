@@ -39,6 +39,7 @@
 
                         <br>
                         <h1 class="tituloSecao" style="font-size: 40px">Oi? Phaze?</h1>
+                        <br>
                         <h2 class="subtituloSobre">Sobre</h2>
                         <p class="sobre">
                             Fundado com o foco de apresentar materiais da cultura pop, o phaze é um web site dinâmico que com seu
@@ -47,24 +48,25 @@
                         </p>
 
                         <h1 class="tituloSecao" style="font-size: 40px">Curta, sigua e some com a gente</h1>
+                        <br>
                         <h2 class="subtituloSobre">Redes Sociais</h2>
 
                         <div style="width:100%; font-size: 18px">
                             <div>
-                                <a href="https://www.google.com.br"><i class="fa fa-facebook-square"></i>&nbsp;&nbsp;Facebook</a><br><br>
+                                <a href="https://www.facebook.com/PHAZE-620009784694858/?fref=ts"><i class="fa fa-facebook-square"></i>&nbsp;&nbsp;Facebook</a><br><br>
                             </div>
                             <div>
-                                <a href="https://www.google.com.br"><i class="fa fa-twitter-square"></i>&nbsp;&nbsp;Twitter</a><br><br>
+                                <a href="https://twitter.com/phazepodcast"><i class="fa fa-twitter-square"></i>&nbsp;&nbsp;Twitter</a><br><br>
                             </div>
                             <div>
                                 <a href="https://www.google.com.br"><i class="fa fa-google-plus-square"></i>&nbsp;&nbsp;Google+</a><br><br>
                             </div>
-                            <div>
+                            <!--<div>
                                 <a href="https://www.google.com.br"><i class="fa fa-rss-square"></i>&nbsp;&nbsp;Rss</a><br><br>
                             </div>
                             <div>
                                 <a href="https://www.google.com.br"><i class="fa fa-music"></i>&nbsp;&nbsp;iTunes</a>
-                            </div>
+                            </div>-->
                         </div>
 
                         <h1 class="tituloSecao" style="font-size: 40px">Entre em contato</h1>
